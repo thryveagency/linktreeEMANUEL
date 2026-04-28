@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+  <title>Hair House — Links Úteis</title>
+  <meta name="description" content="Acesse os links oficiais da Hair House: prótese capilar, cursos, localização, Instagram e YouTube."/>
+  <meta name="robots" content="index, follow"/>
+  <meta property="og:title" content="Hair House — Links Úteis"/>
+  <meta property="og:description" content="Prótese capilar, cursos e muito mais. Acesse os links oficiais da Hair House."/>
+  <meta property="og:image" content="assets/1_0f17dce23087.png"/>
+  <meta property="og:url" content="https://hairhouseoficial.com.br/links-uteis/"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <link rel="icon" sizes="32x32" href="assets/2-150x150_1d10b1584288.png"/>
+  <link rel="apple-touch-icon" href="assets/2_605c6df85ff8.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --gold: #C9A96E;
+      --gold-light: #E8C98A;
+      --gold-dark: #8B6914;
+      --cream: #F5EDD7;
+      --dark: #1a1209;
+      --dark-mid: #2a1e0d;
+      --glass-bg: rgba(255, 255, 255, 0.06);
+      --glass-border: rgba(201, 169, 110, 0.25);
+      --glass-hover: rgba(201, 169, 110, 0.12);
+      --shadow-card: 0 8px 32px rgba(0,0,0,0.45), 0 1px 0 rgba(201,169,110,0.15) inset;
+      --radius: 16px;
+      --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    html, body {
+      height: 100%;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--dark);
+      color: var(--cream);
+      min-height: 100vh;
+    }
+
+    /* ── BACKGROUND ─────────────────────────────── */
+    .page-bg {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+    }
+
+    .page-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .page-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(10,7,2,0.55) 0%,
+        rgba(10,7,2,0.70) 35%,
+        rgba(10,7,2,0.88) 70%,
+        rgba(10,7,2,0.97) 100%
+      );
+    }
+
+    /* ── WRAPPER ─────────────────────────────────── */
+    .wrapper {
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 20px 60px;
+    }
+
+    /* ── LOGO ────────────────────────────────────── */
+    .logo-wrap {
+      width: 100%;
+      max-width: 420px;
+      padding-top: 48px;
+      padding-bottom: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+
+    .logo-wrap a {
+      display: block;
+      text-decoration: none;
+    }
+
+    .logo-name-link {
+      display: block;
+    }
+
+    .logo-name {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 8vw, 3.2rem);
+      font-weight: 700;
+      color: var(--cream);
+      text-align: center;
+      letter-spacing: 0.04em;
+      line-height: 1.1;
+      filter: drop-shadow(0 4px 24px rgba(201,169,110,0.45));
+      background: linear-gradient(135deg, #E8C98A 0%, #C9A96E 40%, #F5EDD7 70%, #C9A96E 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      transition: filter var(--transition);
+    }
+
+    .logo-name-link:hover .logo-name {
+      filter: drop-shadow(0 6px 32px rgba(201,169,110,0.7));
+    }
+
+    .logo-wrap img {
+      width: 100%;
+      max-width: 320px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      filter: drop-shadow(0 4px 24px rgba(201,169,110,0.35));
+    }
+
+    .logo-tagline {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.78rem;
+      font-weight: 400;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-align: center;
+      margin-top: 10px;
+      opacity: 0.85;
+    }
+
+    /* ── GOLD DIVIDER ────────────────────────────── */
+    .divider {
+      width: 120px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 20px auto 28px;
+      opacity: 0.6;
+    }
+
+    /* ── LINKS CONTAINER ─────────────────────────── */
+    .links-container {
+      width: 100%;
+      max-width: 420px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    /* ── LINK CARD ───────────────────────────────── */
+    .link-card {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .link-row {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      box-shadow: var(--shadow-card);
+      transition: border-color var(--transition), box-shadow var(--transition), background var(--transition);
+      overflow: hidden;
+    }
+
+    .link-row:hover {
+      border-color: rgba(201,169,110,0.55);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.55), 0 0 0 1px rgba(201,169,110,0.2);
+      background: var(--glass-hover);
+    }
+
+    /* Main button part */
+    .link-main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 16px 18px;
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+      min-width: 0;
+      transition: background var(--transition);
+      background: none;
+      border: none;
+      text-align: left;
+    }
+
+    .link-main:hover {
+      background: rgba(201,169,110,0.05);
+    }
+
+    .link-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(201,169,110,0.18), rgba(201,169,110,0.06));
+      border: 1px solid rgba(201,169,110,0.22);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 20px;
+      transition: transform var(--transition), background var(--transition);
+    }
+
+    .link-main:hover .link-icon {
+      transform: scale(1.08);
+      background: linear-gradient(135deg, rgba(201,169,110,0.28), rgba(201,169,110,0.10));
+    }
+
+    .link-text {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      min-width: 0;
+    }
+
+    .link-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--cream);
+      line-height: 1.3;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .link-sub {
+      font-size: 0.72rem;
+      font-weight: 400;
+      color: var(--gold);
+      letter-spacing: 0.04em;
+      opacity: 0.85;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* Arrow on main button */
+    .link-arrow {
+      flex-shrink: 0;
+      color: var(--gold);
+      opacity: 0.5;
+      margin-right: 4px;
+      transition: opacity var(--transition), transform var(--transition);
+    }
+
+    .link-main:hover .link-arrow {
+      opacity: 1;
+      transform: translateX(3px);
+    }
+
+    /* Separator */
+    .link-sep {
+      width: 1px;
+      height: 48px;
+      background: linear-gradient(to bottom, transparent, rgba(201,169,110,0.3), transparent);
+      flex-shrink: 0;
+    }
+
+    /* + Info button */
+    .link-info-btn {
+      width: 52px;
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--gold);
+      font-size: 22px;
+      font-weight: 300;
+      flex-shrink: 0;
+      transition: background var(--transition), color var(--transition), transform var(--transition);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      position: relative;
+    }
+
+    .link-info-btn:hover {
+      background: rgba(201,169,110,0.1);
+      color: var(--gold-light);
+    }
+
+    .link-info-btn.active {
+      background: rgba(201,169,110,0.14);
+      color: var(--gold-light);
+    }
+
+    .link-info-btn svg {
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .link-info-btn.active svg {
+      transform: rotate(45deg);
+    }
+
+    /* Expandable info panel */
+    .link-info-panel {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .link-info-panel.open {
+      max-height: 300px;
+    }
+
+    .link-info-inner {
+      padding: 14px 18px 18px;
+      background: rgba(10,7,2,0.55);
+      border-top: 1px solid rgba(201,169,110,0.15);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .link-info-inner p {
+      font-size: 0.83rem;
+      line-height: 1.65;
+      color: rgba(245,237,215,0.85);
+      font-weight: 300;
+    }
+
+    .link-info-inner strong {
+      color: var(--gold-light);
+      font-weight: 600;
+    }
+
+    /* ── FOOTER ──────────────────────────────────── */
+    .footer {
+      margin-top: 36px;
+      text-align: center;
+    }
+
+    .footer p {
+      font-size: 0.7rem;
+      color: rgba(245,237,215,0.35);
+      letter-spacing: 0.06em;
+    }
+
+    /* ── ENTRY ANIMATIONS ────────────────────────── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(22px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .logo-wrap { animation: fadeUp 0.7s ease both; }
+    .divider { animation: fadeUp 0.7s 0.15s ease both; }
+
+    .link-card:nth-child(1) { animation: fadeUp 0.55s 0.20s ease both; }
+    .link-card:nth-child(2) { animation: fadeUp 0.55s 0.30s ease both; }
+    .link-card:nth-child(3) { animation: fadeUp 0.55s 0.40s ease both; }
+    .link-card:nth-child(4) { animation: fadeUp 0.55s 0.50s ease both; }
+    .link-card:nth-child(5) { animation: fadeUp 0.55s 0.60s ease both; }
+
+    /* ── RESPONSIVE ──────────────────────────────── */
+    @media (max-width: 480px) {
+      .logo-wrap {
+        padding-top: 36px;
+      }
+
+      .logo-wrap img {
+        max-width: 260px;
+      }
+
+      .link-title {
+        font-size: 0.93rem;
+      }
+
+      .link-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+      }
+
+      .link-info-btn {
+        width: 46px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- BACKGROUND -->
+  <div class="page-bg" aria-hidden="true">
+    <img
+      src="assets/Emanuel.jpg.jpeg"
+      sizes="100vw"
+      alt="Emanuel Alves — Hair House"
+      fetchpriority="high"
+      decoding="async"
+    />
+  </div>
+
+  <!-- MAIN WRAPPER -->
+  <div class="wrapper">
+
+    <!-- LOGO -->
+    <div class="logo-wrap">
+      <a href="https://hairhouseoficial.com.br" target="_blank" rel="noopener" class="logo-name-link">
+        <h1 class="logo-name">Emanuel Alves</h1>
+      </a>
+      <p class="logo-tagline">Hair House · Sua casa do cabelo</p>
+    </div>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <!-- LINKS -->
+    <nav class="links-container" aria-label="Links úteis Hair House">
+
+      <!-- 1. Prótese Capilar -->
+      <div class="link-card">
+        <div class="link-row">
+          <a
+            class="link-main"
+            href="https://api.whatsapp.com/send/?phone=5579991392305&text=Ol%C3%A1%2C+tenho+interesse+em+saber+mais+sobre+pr%C3%B3tese+capilar!"
+            target="_blank"
+            rel="noopener"
+            id="btn-protese"
+            aria-label="Quero minha prótese capilar — WhatsApp"
+          >
+            <div class="link-icon" style="background:rgba(37,211,102,0.15);border-color:rgba(37,211,102,0.3)">
+              <svg viewBox="0 0 32 32" width="26" height="26" xmlns="http://www.w3.org/2000/svg"><path fill="#25D366" d="M16 .4C7.4.4.4 7.4.4 16c0 2.7.7 5.3 2 7.6L.4 31.6l8.2-2.1C10.8 30.7 13.3 31.3 16 31.3c8.6 0 15.6-7 15.6-15.6S24.6.4 16 .4zm0 28.5c-2.4 0-4.8-.6-6.8-1.8l-.5-.3-5 1.3 1.3-4.9-.3-.5C3.4 21 2.7 18.6 2.7 16 2.7 8.7 8.7 2.7 16 2.7S29.3 8.7 29.3 16 23.3 28.9 16 28.9zm8.5-9.7c-.5-.2-2.8-1.4-3.2-1.5-.4-.2-.7-.2-1 .2-.3.5-1.2 1.5-1.5 1.8-.3.3-.5.4-1 .1-.5-.2-2-.7-3.8-2.3-1.4-1.2-2.3-2.8-2.6-3.2-.3-.5 0-.7.2-.9.2-.2.5-.5.7-.8.2-.3.3-.5.5-.8.2-.3.1-.6 0-.8-.1-.2-1-2.5-1.4-3.4-.4-.9-.7-.8-1-.8h-.9c-.3 0-.8.1-1.2.6-.4.5-1.6 1.6-1.6 3.8s1.7 4.4 1.9 4.7c.2.3 3.3 5.1 8 7.1 1.1.5 2 .8 2.7 1 1.1.3 2.1.3 2.9.2.9-.1 2.8-1.1 3.2-2.2.4-1.1.4-2 .3-2.2-.2-.2-.5-.3-1-.5z"/></svg>
+            </div>
+            <div class="link-text">
+              <span class="link-title">Quero minha Prótese</span>
+              <span class="link-sub">Prótese Capilar · Fale conosco</span>
+            </div>
+          </a>
+          <div class="link-sep" aria-hidden="true"></div>
+          <button
+            class="link-info-btn"
+            onclick="toggleInfo(this, 'info-protese')"
+            aria-expanded="false"
+            aria-controls="info-protese"
+            aria-label="Mais informações sobre prótese capilar"
+            id="btn-info-protese"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+        </div>
+        <div class="link-info-panel" id="info-protese" role="region" aria-labelledby="btn-info-protese">
+          <div class="link-info-inner">
+            <p>A <strong>prótese capilar</strong> é uma solução estética para quem deseja recuperar os cabelos com naturalidade e autoestima. Na Hair House, trabalhamos com técnicas avançadas e materiais de alta qualidade para garantir um resultado imperceptível e durável.<br><br>Entre em contato conosco pelo WhatsApp e descubra a solução ideal para você! ✨</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Curso / Imersão -->
+      <div class="link-card">
+        <div class="link-row">
+          <a
+            class="link-main"
+            href="https://api.whatsapp.com/send/?phone=5579991392305&text=Quero+saber+mais+sobre+a+immers%C3%A3o+presencial+com+Emanuel+Alves!"
+            target="_blank"
+            rel="noopener"
+            id="btn-curso"
+            aria-label="Imersão presencial com Emanuel Alves — inscreva-se"
+          >
+            <div class="link-icon">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#C9A96E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M2 10l10-5 10 5-10 5-10-5z"/><path d="M6 12.5v4c3 2.5 9 2.5 12 0v-4"/><line x1="22" y1="10" x2="22" y2="16"/></svg>
+            </div>
+            <div class="link-text">
+              <span class="link-title">Curso · Imersão Presencial</span>
+              <span class="link-sub">Emanuel Alves · 21 de Julho</span>
+            </div>
+          </a>
+          <div class="link-sep" aria-hidden="true"></div>
+          <button
+            class="link-info-btn"
+            onclick="toggleInfo(this, 'info-curso')"
+            aria-expanded="false"
+            aria-controls="info-curso"
+            aria-label="Mais informações sobre o curso"
+            id="btn-info-curso"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+        </div>
+        <div class="link-info-panel" id="info-curso" role="region" aria-labelledby="btn-info-curso">
+          <div class="link-info-inner">
+            <p><strong>Imersão Presencial com Emanuel Alves</strong><br>📅 Data: <strong>21 de Julho</strong><br><br>Uma experiência única para profissionais e entusiastas do universo capilar. Aprenda as técnicas mais avançadas em aplicação e manutenção de próteses capilares com quem é referência no mercado.<br><br>🔥 Vagas limitadas — garanta já a sua!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Localização -->
+      <div class="link-card">
+        <div class="link-row">
+          <a
+            class="link-main"
+            href="https://maps.app.goo.gl/BJTxcBuM7d8mVwKM9"
+            target="_blank"
+            rel="noopener"
+            id="btn-localizacao"
+            aria-label="Ver localização da Hair House no Maps"
+          >
+            <div class="link-icon">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#C9A96E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.686 2 6 4.686 6 8c0 4.418 6 12 6 12s6-7.582 6-12c0-3.314-2.686-6-6-6z"/><circle cx="12" cy="8" r="2.2"/></svg>
+            </div>
+            <div class="link-text">
+              <span class="link-title">Localização</span>
+              <span class="link-sub">Encontre-nos no Google Maps</span>
+            </div>
+          </a>
+          <div class="link-sep" aria-hidden="true"></div>
+          <button
+            class="link-info-btn"
+            onclick="toggleInfo(this, 'info-local')"
+            aria-expanded="false"
+            aria-controls="info-local"
+            aria-label="Mais informações sobre localização"
+            id="btn-info-local"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+        </div>
+        <div class="link-info-panel" id="info-local" role="region" aria-labelledby="btn-info-local">
+          <div class="link-info-inner">
+            <p>Estamos localizados em <strong>Aracaju, Sergipe</strong>. Clique no botão acima para abrir nossa localização no Google Maps e traçar a rota mais rápida até nós. 🗺️<br><br>Atendemos com horário agendado — entre em contato para marcar sua visita!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Instagram -->
+      <div class="link-card">
+        <div class="link-row">
+          <a
+            class="link-main"
+            href="https://www.instagram.com/hairhouseoficial/"
+            target="_blank"
+            rel="noopener"
+            id="btn-instagram"
+            aria-label="Seguir Hair House no Instagram"
+          >
+            <div class="link-icon" style="background:rgba(220,39,67,0.12);border-color:rgba(220,39,67,0.28)">
+              <svg viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="ig" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#f09433"/><stop offset="50%" stop-color="#dc2743"/><stop offset="100%" stop-color="#bc1888"/></linearGradient></defs><path fill="url(#ig)" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </div>
+            <div class="link-text">
+              <span class="link-title">Instagram</span>
+              <span class="link-sub">@hairhouseoficial</span>
+            </div>
+          </a>
+          <div class="link-sep" aria-hidden="true"></div>
+          <button
+            class="link-info-btn"
+            onclick="toggleInfo(this, 'info-insta')"
+            aria-expanded="false"
+            aria-controls="info-insta"
+            aria-label="Mais informações sobre o Instagram"
+            id="btn-info-insta"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+        </div>
+        <div class="link-info-panel" id="info-insta" role="region" aria-labelledby="btn-info-insta">
+          <div class="link-info-inner">
+            <p>Siga nosso perfil no Instagram para acompanhar transformações incríveis, dicas de cuidado capilar e novidades da Hair House. 💫<br><br>Conteúdo exclusivo publicado toda semana! Siga <strong>@hairhouseoficial</strong> e fique por dentro de tudo.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. YouTube -->
+      <div class="link-card">
+        <div class="link-row">
+          <a
+            class="link-main"
+            href="https://youtube.com/@hairhouseaju?si=KhXQQ8SXjLrBMUcb"
+            target="_blank"
+            rel="noopener"
+            id="btn-youtube"
+            aria-label="Assinar canal da Hair House no YouTube"
+          >
+            <div class="link-icon" style="background:rgba(255,0,0,0.12);border-color:rgba(255,0,0,0.25)">
+              <svg viewBox="0 0 24 24" width="26" height="26" xmlns="http://www.w3.org/2000/svg"><path fill="#FF0000" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
+            </div>
+            <div class="link-text">
+              <span class="link-title">YouTube</span>
+              <span class="link-sub">@hairhouseaju · Inscreva-se</span>
+            </div>
+          </a>
+          <div class="link-sep" aria-hidden="true"></div>
+          <button
+            class="link-info-btn"
+            onclick="toggleInfo(this, 'info-yt')"
+            aria-expanded="false"
+            aria-controls="info-yt"
+            aria-label="Mais informações sobre o YouTube"
+            id="btn-info-yt"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+        </div>
+        <div class="link-info-panel" id="info-yt" role="region" aria-labelledby="btn-info-yt">
+          <div class="link-info-inner">
+            <p>No nosso canal do YouTube você encontra vídeos educativos, tutoriais de aplicação e manutenção de próteses capilares, além de vlogs com bastidores da Hair House. 🎬<br><br>Inscreva-se e ative o sininho para não perder nenhum conteúdo!</p>
+          </div>
+        </div>
+      </div>
+
+    </nav>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>© 2025 Hair House · Todos os direitos reservados</p>
+    </footer>
+
+  </div>
+
+  <script>
+    function toggleInfo(btn, panelId) {
+      const panel = document.getElementById(panelId);
+      const isOpen = panel.classList.contains('open');
+
+      // Close all panels first
+      document.querySelectorAll('.link-info-panel.open').forEach(function(p) {
+        p.classList.remove('open');
+      });
+      document.querySelectorAll('.link-info-btn.active').forEach(function(b) {
+        b.classList.remove('active');
+        b.setAttribute('aria-expanded', 'false');
+      });
+
+      // Toggle clicked panel
+      if (!isOpen) {
+        panel.classList.add('open');
+        btn.classList.add('active');
+        btn.setAttribute('aria-expanded', 'true');
+
+        // Smooth scroll into view on mobile
+        setTimeout(function() {
+          panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }, 50);
+      }
+    }
+  </script>
+
+</body>
+</html>
