@@ -91,6 +91,84 @@
       padding: 0 20px 60px;
     }
 
+    /* ── LAYOUT DESKTOP ─────────────────────────── */
+    @media (min-width: 1024px) {
+      body {
+        display: flex;
+        flex-direction: row-reverse;
+        overflow: hidden;
+      }
+      .page-bg {
+        position: relative;
+        flex: 1;
+        height: 100vh;
+      }
+      .page-bg::after {
+        background: linear-gradient(
+          to left,
+          transparent 0%,
+          rgba(10,7,2,0.3) 50%,
+          rgba(10,7,2,0.98) 100%
+        );
+      }
+      .wrapper {
+        width: 50%;
+        max-width: 600px;
+        height: 100vh;
+        overflow-y: auto;
+        padding: 40px 60px;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+        z-index: 1;
+      }
+      .wrapper::before {
+        content: '';
+        position: fixed;
+        top: 0; bottom: 0;
+        left: 0;
+        width: 50%;
+        max-width: 600px;
+        background-image: 
+          linear-gradient(to right, transparent 50%, rgba(10,7,2,0.95) 100%),
+          url('assets/ChatGPT%20Image%2030%20de%20abr.%20de%202026%2C%2015_00_58.png');
+        background-size: cover, cover;
+        background-position: right center, center;
+        background-repeat: no-repeat;
+        z-index: -2;
+        filter: brightness(0.35) contrast(1.1) blur(4px);
+        transform: scale(1.05);
+        transform-origin: left top;
+        pointer-events: none;
+      }
+      .wrapper::after {
+        content: '';
+        position: fixed;
+        top: 0; bottom: 0;
+        left: 0;
+        width: 50%;
+        max-width: 600px;
+        background-image: 
+          radial-gradient(circle at 25% 35%, rgba(201,169,110,0.2) 0%, transparent 15%),
+          radial-gradient(circle at 75% 65%, rgba(255,230,150,0.15) 0%, transparent 20%),
+          radial-gradient(circle at 50% 85%, rgba(201,169,110,0.1) 0%, transparent 12%);
+        z-index: -1;
+        pointer-events: none;
+        animation: subtleShimmer 6s ease-in-out infinite alternate;
+        mix-blend-mode: screen;
+      }
+      .wrapper::-webkit-scrollbar {
+        width: 6px;
+      }
+      .wrapper::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      .wrapper::-webkit-scrollbar-thumb {
+        background: rgba(201,169,110,0.4);
+        border-radius: 4px;
+      }
+    }
+
     /* ── LOGO ────────────────────────────────────── */
     .logo-wrap {
       width: 100%;
@@ -110,6 +188,36 @@
 
     .logo-name-link {
       display: block;
+      text-decoration: none;
+    }
+
+    .logo-title-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .verified-badge {
+      width: clamp(22px, 6vw, 28px);
+      height: clamp(22px, 6vw, 28px);
+      flex-shrink: 0;
+      filter: drop-shadow(0 2px 8px rgba(0, 149, 246, 0.4));
+    }
+
+    .additional-logo {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      margin-bottom: 4px;
+      animation: fadeUp 0.7s 0.1s ease both;
+    }
+
+    .additional-logo img {
+      width: 243px;
+      height: auto;
+      filter: drop-shadow(0 4px 12px rgba(201,169,110,0.25));
     }
 
     .logo-name {
@@ -182,20 +290,20 @@
       display: flex;
       align-items: center;
       gap: 0;
-      background: rgba(26, 18, 9, 0.2);
+      background: rgba(26, 18, 9, 0.7);
       border: 1px solid var(--glass-border);
       border-radius: var(--radius);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
       box-shadow: var(--shadow-card);
       transition: border-color var(--transition), box-shadow var(--transition), background var(--transition);
       overflow: hidden;
     }
 
     .link-row:hover {
-      border-color: rgba(201,169,110,0.55);
-      box-shadow: 0 12px 40px rgba(0,0,0,0.55), 0 0 0 1px rgba(201,169,110,0.2);
-      background: rgba(26, 18, 9, 0.4);
+      border-color: rgba(201,169,110,0.65);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.65), 0 0 0 1px rgba(201,169,110,0.3);
+      background: rgba(26, 18, 9, 0.85);
     }
 
     /* Main button part */
@@ -339,10 +447,10 @@
 
     .link-info-inner {
       padding: 14px 18px 18px;
-      background: rgba(10,7,2,0.45);
+      background: rgba(10,7,2,0.75);
       border-top: 1px solid rgba(201,169,110,0.15);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
     }
 
     .link-info-inner p {
@@ -375,6 +483,12 @@
       to   { opacity: 1; transform: translateY(0); }
     }
 
+    @keyframes subtleShimmer {
+      0% { opacity: 0.3; filter: brightness(0.8); transform: scale(1); }
+      50% { opacity: 0.7; filter: brightness(1.2); transform: scale(1.02); }
+      100% { opacity: 0.3; filter: brightness(0.9); transform: scale(0.98); }
+    }
+
     .logo-wrap { animation: fadeUp 0.7s ease both; }
     .divider { animation: fadeUp 0.7s 0.15s ease both; }
 
@@ -383,6 +497,9 @@
     .link-card:nth-child(3) { animation: fadeUp 0.55s 0.40s ease both; }
     .link-card:nth-child(4) { animation: fadeUp 0.55s 0.50s ease both; }
     .link-card:nth-child(5) { animation: fadeUp 0.55s 0.60s ease both; }
+    .link-card:nth-child(6) { animation: fadeUp 0.55s 0.70s ease both; }
+    .link-card:nth-child(7) { animation: fadeUp 0.55s 0.80s ease both; }
+    .link-card:nth-child(8) { animation: fadeUp 0.55s 0.90s ease both; }
 
     /* ── RESPONSIVE ──────────────────────────────── */
     @media (max-width: 480px) {
@@ -430,9 +547,18 @@
     <!-- LOGO -->
     <div class="logo-wrap">
       <a href="https://hairhouseoficial.com.br" target="_blank" rel="noopener" class="logo-name-link">
-        <h1 class="logo-name">Emanuel Alves</h1>
+        <div class="logo-title-row">
+          <h1 class="logo-name">Emanuel Alves</h1>
+          <svg class="verified-badge" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="#0095F6">
+            <path d="M12 0l3.4 1.5 3.6-1.1 1.6 3.4 3.7 1.2-.5 3.7 2.8 2.5-2.2 3.1 1.2 3.6-3.3 1.7-.5 3.7-3.7-.3-2.1 3.1L12 24l-2.7-2.1-3.7.3-.5-3.7-3.3-1.7 1.2-3.6-2.2-3.1 2.8-2.5-.5-3.7 3.7-1.2 1.6-3.4 3.6 1.1L12 0zm-1.2 16.8l8.2-8.2-1.8-1.8-6.4 6.4-3.1-3.1-1.8 1.8 4.9 4.9z"/>
+          </svg>
+        </div>
       </a>
-      <p class="logo-tagline">Hair House · Sua casa do cabelo</p>
+    </div>
+
+    <!-- LOGO MARCA ADICIONAL -->
+    <div class="additional-logo">
+      <img src="assets/2_605c6df85ff8.png" alt="Selo Hair House" />
     </div>
 
     <div class="divider" aria-hidden="true"></div>
@@ -445,7 +571,7 @@
         <div class="link-row">
           <a
             class="link-main"
-            href="https://api.whatsapp.com/send/?phone=5579991392305&text=Ol%C3%A1%21+Tenho+interesse+em+colocar+pr%C3%B3tese+capilar%21"
+            href="https://api.whatsapp.com/send/?phone=5579991925801&text=Ol%C3%A1%21+Tenho+interesse+em+colocar+pr%C3%B3tese+capilar%21"
             target="_blank"
             rel="noopener"
             id="btn-protese"
@@ -483,7 +609,7 @@
         <div class="link-row">
           <a
             class="link-main"
-            href="https://api.whatsapp.com/send/?phone=5579991392305&text=Quero+saber+mais+sobre+a+immers%C3%A3o+presencial+com+Emanuel+Alves!"
+            href="https://api.whatsapp.com/send/?phone=5579991925801&text=Quero+saber+mais+sobre+a+immers%C3%A3o+presencial+com+Emanuel+Alves!"
             target="_blank"
             rel="noopener"
             id="btn-curso"
@@ -626,6 +752,122 @@
         <div class="link-info-panel" id="info-yt" role="region" aria-labelledby="btn-info-yt">
           <div class="link-info-inner">
             <p>No YouTube da Hair House, a gente compartilha conteúdos para quem quer entender melhor o mundo da prótese capilar.<br><br>Tem explicação, bastidor, cuidados, manutenção e orientações para clientes e profissionais. Se inscreva no canal. 🎬</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. TikTok -->
+      <div class="link-card">
+        <div class="link-row">
+          <a
+            class="link-main"
+            href="https://www.tiktok.com/@hairhouseoficial?_r=1&_t=ZS-95wwIbUNfUY"
+            target="_blank"
+            rel="noopener"
+            id="btn-tiktok"
+            aria-label="Seguir Hair House no TikTok"
+          >
+            <div class="link-icon" style="background:#000000;border-color:rgba(255,255,255,0.2)">
+              <svg viewBox="0 0 448 512" width="22" height="22" fill="#fff" xmlns="http://www.w3.org/2000/svg"><path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/></svg>
+            </div>
+            <div class="link-text">
+              <span class="link-title">TikTok</span>
+              <span class="link-sub">@hairhouseoficial</span>
+            </div>
+          </a>
+          <div class="link-sep" aria-hidden="true"></div>
+          <button
+            class="link-info-btn"
+            onclick="toggleInfo(this, 'info-tiktok')"
+            aria-expanded="false"
+            aria-controls="info-tiktok"
+            aria-label="Mais informações sobre o TikTok"
+            id="btn-info-tiktok"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+        </div>
+        <div class="link-info-panel" id="info-tiktok" role="region" aria-labelledby="btn-info-tiktok">
+          <div class="link-info-inner">
+            <p>Acompanhe nossos vídeos rápidos, dicas de cuidados diários e transformações impressionantes.<br><br>Siga nosso perfil no TikTok e veja a mágica acontecer em poucos segundos! 🎵</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7. Kwai -->
+      <div class="link-card">
+        <div class="link-row">
+          <a
+            class="link-main"
+            href="https://www.kwai.com/@Hairhouseoficial?kpn=KWAI&share_device_id=DE7FDDFE-77EF-4E3A-97EE-EAFDAD1107CF&share_item_type=profile&share_id=DE7FDDFE-77EF-4E3A-97EE-EAFDAD1107CF_1777487073889&language=pt-BR&share_uid=150000199245677&fid=150000199245677&cc=COPY_LINK&timestamp=1777487073889&authorKwaiId=Hairhouseoficial&translateKey=share_profile_default_word&shareBucket=br&pwa_source=share&shareCountry=BRA&shareBiz=profile&share_item_info=%40Hairhouseoficial&ept=v2&short_key=z9CvBCMv&PWA_share_N_string=20&request_source=1001&share_redirect_switch_choice=pwa"
+            target="_blank"
+            rel="noopener"
+            id="btn-kwai"
+            aria-label="Seguir Hair House no Kwai"
+          >
+            <div class="link-icon" style="background:#FF7700;border-color:rgba(255,119,0,0.5)">
+              <svg viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 6V18M8 12L15 6M8 12L15 18" stroke="#FFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="link-text">
+              <span class="link-title">Kwai</span>
+              <span class="link-sub">@Hairhouseoficial</span>
+            </div>
+          </a>
+          <div class="link-sep" aria-hidden="true"></div>
+          <button
+            class="link-info-btn"
+            onclick="toggleInfo(this, 'info-kwai')"
+            aria-expanded="false"
+            aria-controls="info-kwai"
+            aria-label="Mais informações sobre o Kwai"
+            id="btn-info-kwai"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+        </div>
+        <div class="link-info-panel" id="info-kwai" role="region" aria-labelledby="btn-info-kwai">
+          <div class="link-info-inner">
+            <p>Fique por dentro das nossas novidades, tendências e resultados incríveis de próteses capilares.<br><br>Nos acompanhe no Kwai para conteúdos exclusivos! 📱</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8. Threads -->
+      <div class="link-card">
+        <div class="link-row">
+          <a
+            class="link-main"
+            href="https://www.threads.com/@hairhouseoficial?igshid=NTc4MTIwNjQ2YQ%3D%3D&utm_campaign=wa_th_web_link_ct&utm_source=waios"
+            target="_blank"
+            rel="noopener"
+            id="btn-threads"
+            aria-label="Seguir Hair House no Threads"
+          >
+            <div class="link-icon" style="background:#000000;border-color:rgba(255,255,255,0.2)">
+              <svg viewBox="0 0 192 192" width="22" height="22" fill="#fff" xmlns="http://www.w3.org/2000/svg"><path d="M141.537 88.9883C140.71 88.5919 139.87 88.2104 139.019 87.8451C137.537 60.5382 122.616 44.905 97.5619 44.745C97.4484 44.7443 97.3355 44.7443 97.222 44.7443C82.2364 44.7443 69.7731 51.1409 62.102 62.7807L75.881 72.2328C81.6116 63.5383 90.6052 61.6848 97.2286 61.6848C97.3051 61.6848 97.3819 61.6848 97.4576 61.6855C105.707 61.7381 111.932 64.1366 115.961 68.814C118.893 72.2193 120.854 76.925 121.825 82.8638C114.511 81.6207 106.601 81.2385 98.145 81.7233C74.3247 83.0954 59.0111 96.9879 60.0396 116.292C60.5615 126.084 65.4397 134.508 73.775 140.011C80.8224 144.663 89.899 146.938 99.3323 146.423C111.79 145.74 121.563 140.987 128.381 132.296C133.559 125.696 136.834 117.143 138.28 106.366C144.217 109.949 148.617 114.664 151.047 120.332C155.179 129.967 155.42 145.8 142.501 158.708C131.182 170.016 117.576 174.908 97.0135 175.059C74.2042 174.89 56.9538 167.575 45.7381 153.317C35.2355 139.966 29.8077 120.682 29.6052 96.0002C29.8077 71.3178 35.2355 52.0336 45.7381 38.6827C56.9538 24.4249 74.2039 17.11 97.0132 16.9405C119.988 17.1113 137.539 24.4614 148.82 38.6654C156.84 48.7615 161.734 62.7499 162.326 79.9829L179.26 80.0099C178.583 59.8189 172.639 42.664 162.062 29.3512C148.163 11.8741 126.892 2.05268 97.0132 1.83984C67.1264 2.05268 45.864 11.875 31.9723 29.3629C19.1678 45.4746 12.6738 67.925 12.4414 96.0002C12.6738 124.075 19.1678 146.526 31.9723 162.637C45.864 180.125 67.1264 189.947 97.0135 190.16C121.218 189.993 140.233 183.178 154.512 168.913C172.585 150.865 172.935 126.974 166.702 112.46C161.543 100.449 152.923 92.5186 141.537 88.9883ZM98.4405 129.507C88.0005 130.095 77.1544 125.409 76.6196 115.372C76.2232 107.93 81.9158 99.626 99.0812 98.6368C101.047 98.5234 102.976 98.468 104.871 98.468C111.106 98.468 116.939 99.0737 122.242 100.233C120.264 124.935 108.662 128.946 98.4405 129.507Z"/></svg>
+            </div>
+            <div class="link-text">
+              <span class="link-title">Threads</span>
+              <span class="link-sub">@hairhouseoficial</span>
+            </div>
+          </a>
+          <div class="link-sep" aria-hidden="true"></div>
+          <button
+            class="link-info-btn"
+            onclick="toggleInfo(this, 'info-threads')"
+            aria-expanded="false"
+            aria-controls="info-threads"
+            aria-label="Mais informações sobre o Threads"
+            id="btn-info-threads"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+        </div>
+        <div class="link-info-panel" id="info-threads" role="region" aria-labelledby="btn-info-threads">
+          <div class="link-info-inner">
+            <p>Participe das nossas conversas, tire dúvidas rápidas e veja nossos comunicados mais recentes.<br><br>Conecte-se conosco no Threads! 💬</p>
           </div>
         </div>
       </div>
